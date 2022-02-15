@@ -1,5 +1,5 @@
 use Mix.Config
 
-config :elixir_mix, Poison.Schedule, jobs: [
+config :poison, Poison.Schedule, jobs: [
                                            {"* * * * *", fn -> GenServer.cast(:server, :get_url) end}
 ]

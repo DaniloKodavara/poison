@@ -1,3 +1,3 @@
 defmodule Poison.Schedule do
-  use Quantum, otp_app: poison
+  use Quantum, otp_app: :poison
 end

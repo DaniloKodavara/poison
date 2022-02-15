@@ -1,9 +1,7 @@
 defmodule Poison.URL do
-  use HTTPoison
-
   def get_url do
-    case HTTPoison.get!("http://google.com.br") do
-      {:ok, response} -> IO.puts("A chamada de certo!")
+    case HTTPoison.get("http://google.com.br") do
+      {:ok, _ } -> IO.puts("A chamada deu certo!")
       {:error, _ } -> IO.puts("A chamada nao deu certo!")
     end
   end

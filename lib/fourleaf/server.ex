@@ -9,8 +9,8 @@ defmodule Poison.Server do
     {:ok, %{}}
   end
 
-  def handler_cast(:get_url, _) do
-    Poison.PoisonURL.call
+  def handle_cast(:get_url, _) do
+    Poison.URL.get_url
     {:noreply, %{}}
   end
 end
